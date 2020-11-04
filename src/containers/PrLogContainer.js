@@ -11,7 +11,8 @@ class PrLogContainer extends React.Component {
   //
     state = {
         events: [],
-        targetObj: []
+        targetObj: [],
+        submit: 'false'
     }
 
     updateEvents = ()=>  {
@@ -66,6 +67,11 @@ class PrLogContainer extends React.Component {
     }
     
     
+
+    submitHandler = () => {
+        console.log("submitting")
+        this.setState({submit: !this.state.submit})
+    }
 
     render() {
         return (

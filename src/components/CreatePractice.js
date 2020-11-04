@@ -27,7 +27,7 @@ class CreatePractice extends React.Component {
     }
 
     render() {
-    console.log(this.state.events)
+    // console.log(this.state.events)
     return (
         <>
         <form className="new-practice-log-form" onSubmit={this.submitHandler}>
@@ -38,7 +38,7 @@ class CreatePractice extends React.Component {
         <input placeholder="Instrument" type="text" name="instrument" value={this.state.instrument} onChange={this.changeHandler} />
         <input placeholder="Goals" type="text" name="goal" value={this.state.goal} onChange={this.changeHandler} />
         <textarea placeholder="Reflection" rows={10} type="text" name="reflection" value={this.state.reflection} onChange={this.changeHandler} />
-        <input type="submit" value="Submit" onsubmit={this.someMethod} />
+        <input type="submit" value="Submit" onSubmit={this.props.submitHandler} />
         </form>
         </>
     );

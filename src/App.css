@@ -1,17 +1,6 @@
 .App {
   text-align: center;
 }
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}*/
 
 .App-header {
   background-color: #016397e7;
@@ -33,20 +22,6 @@
   font-size: calc(5px + 1vmin);
   color: white;
 }
-
-/*
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic|IBM+Plex+Mono|Poppins');
@@ -133,63 +108,28 @@ div.sidebar button {
   border: 2px solid grey;
 }
 
-.search-bar {
-  margin: 10px ;
-  padding: 10px;
-  width: 95%;
-  align-items: center;
-}
-
-
 .sidebar {
-  width:50%;
+  width:66%;
   overflow: scroll;
 }
 
 .detail {
-  width:50%;
+  width:33%;
 }
 
-form.new-recipe-form {
+form.new-practice-log-form {
   padding: 1em;
   display: flex;
   flex-direction: column;
 }
 
-.render-recipes {
-  margin-top: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  column-count: 2;
-}
-
-
 .event-page {
   justify-content: left;
 }
 
-.ingredient-list {
-  columns: 5 auto;
-  font-size: 20px;
+.reflection {
+  min-height: 150pt;
 }
-
-.recipe-card {
-  break-inside: avoid;
-  width: 85%;
-  height: 40%;
-  justify-content: center;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid grey;
-  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
-}
-
-.columns-cards {
-  columns: 2 auto;
-}
-
-
 
 .button-row {
   margin-top: 10px;
