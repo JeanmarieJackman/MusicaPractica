@@ -2,8 +2,11 @@ import React from 'react';
 
 class CreatePractice extends React.Component {
 
+
+    //
+    //  Information describing one practice event
+    //  This is submitted up to the PrLogContainer which adds it ot the global list of events through the backend
     state={
-        events: [],
         title: "",
         date: "",
         allDay: 'false',
@@ -13,44 +16,13 @@ class CreatePractice extends React.Component {
         reflection: "",
         user_id: 1
     }
-
-
-    submitHandler = (e) => {
+       
+    submitHandler = (e)=>  {
         e.preventDefault()
-        // this.props.submitHandler(this.state)
-        fetch('http://localhost:3003/events', {
-            method: 'POST',
-            headers: {'content-type':'application/json'},
-            body: JSON.stringify({
-            title: this.state.title,
-            start: this.state.date,
-            end: this.state.date,
-            allDay: this.state.allDay,
-            goal: this.state.goal,
-            duration: this.state.duration,
-            instrument: this.state.instrument,
-            reflection: this.state.reflection,
-            user_id: this.state.user_id
-        })
-    })
-        .then(resp => resp.json())
-        .then(newEvent => {
-            let newArray = [...this.state.events, newEvent]
-            this.setState({ 
-            events: newArray,
-            date: "",
-            duration: "",
-            instrument: "",
-            subject: "",
-            goal: "",
-            reflection: "",
-            user_id: ""
-            })
-        })
-        .catch(console.log)
+        this.props.createCalendarEntry(this.state)
     }
 
-        changeHandler = (e) => {
+    changeHandler = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
 
