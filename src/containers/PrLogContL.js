@@ -30,7 +30,7 @@ class PrLogContL extends React.Component {
     render() {
         return (
             <div className='master-detail-element sidebar'>
-                <PrCalendar events={this.props.events}  handleSelectEvent={this.props.handleSelectEvent}/>
+                <PrCalendar events={this.props.events}  handleSelectEvent={this.props.handleSelectEvent} submitHandler={this.props.submitHandler}/>
                 <CreatePractice />
             </div>
 

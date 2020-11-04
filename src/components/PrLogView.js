@@ -16,7 +16,6 @@ class PrLogView extends React.Component {
 
     render() {
 
-        console.log(this.props.event)
         return (
             <div className="event-page" >
                 <div style={{display: "flex",  flexDirection: "column"}}>
@@ -26,7 +25,7 @@ class PrLogView extends React.Component {
                     < h3 >Practiced for: {this.props.event.duration} minutes</h3>
                     < h3 >Session goal: {this.props.event.goal}</h3>
                     < h3 >Instrument: {this.props.event.instrument}</h3>
-                    < p >Reflections: {this.props.event.reflection}</p>
+                    < p className="reflection">Reflections: {this.props.event.reflection}</p>
 
                 </div>
                 <div style={{display: "flex",  flexDirection: "row", justifyContent: "space-around"}}>

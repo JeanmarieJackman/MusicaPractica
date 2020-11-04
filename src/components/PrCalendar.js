@@ -14,7 +14,8 @@ class PrCalendar extends React.Component {
         // const events = []
         this.state = {
         name: 'React',
-        events: []
+        events: [],
+        end: null
     };
 }
 
@@ -39,7 +40,7 @@ render() {
             <p>
             Practice Calendar
             </p>
-            <div style={{ height: '300pt'}}>
+            <div style={{ height: '225pt'}}>
             <Calendar
                 events={this.state.events}
                 startAccessor="start"

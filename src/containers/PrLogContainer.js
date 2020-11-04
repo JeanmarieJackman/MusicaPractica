@@ -6,7 +6,8 @@ class PrLogContainer extends React.Component {
 
     state = {
         events: [],
-        targetObj: []
+        targetObj: [],
+        submit: 'false'
     }
 
     componentDidMount() {
@@ -22,11 +23,16 @@ class PrLogContainer extends React.Component {
         this.setState({targetObj: event})
     }
 
+    submitHandler = () => {
+        console.log("submitting")
+        this.setState({submit: !this.state.submit})
+    }
+
     render() {
         return (
         <>
             <div className='container'>
-            <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} />
+            <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} submitHandler={this.submitHandler} />
             <PrLogContR events={this.state.events} event={this.state.targetObj} />
             </div>
         </>
