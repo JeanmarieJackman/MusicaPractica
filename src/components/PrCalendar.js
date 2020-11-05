@@ -13,19 +13,7 @@ const localizer = momentLocalizer(moment);
 //
 class PrCalendar extends React.Component {
 
-componentDidMount() {
-    fetch('http://localhost:3003/events')
-        .then(resp => resp.json())
-        // .then(resp => console.log(resp))
-        .then(resp => this.setState({ events: resp }))
-        .catch(console.log)
-}
 
-// handleSelectEvent(event) {
-// 	// let obj = target.currentTarget;
-//     // obj.getElementsByTagName('strong')[0].click();
-//     console.log(event);
-// }
 
 render() {
     // console.log(this.state.events)

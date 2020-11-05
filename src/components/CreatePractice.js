@@ -5,7 +5,8 @@ class CreatePractice extends React.Component {
 
     //
     //  Information describing one practice event
-    //  This is submitted up to the PrLogContainer which adds it ot the global list of events through the backend
+    //  This is submitted up to the PrLogContainer which adds it to the global list of events through the backend
+    //  This must be state as the UI modifies it
     state={
         title: "",
         date: "",
@@ -17,7 +18,7 @@ class CreatePractice extends React.Component {
         user_id: 1
     }
        
-    submitHandler = (e)=>  {
+    newPracticeFormSubmitHandler = (e)=>  {
         e.preventDefault()
         this.props.createCalendarEntry(this.state)
     }
@@ -30,7 +31,7 @@ class CreatePractice extends React.Component {
     // console.log(this.state.events)
     return (
         <>
-        <form className="new-practice-log-form" onSubmit={this.submitHandler}>
+        <form className="new-practice-log-form" onSubmit={this.newPracticeFormSubmitHandler}>
         <h3>Log a Practice Session</h3>
         <input placeholder="Piece, Etude, or Scales practiced" type="text" name="title" value={this.state.title} onChange={this.changeHandler} />
         <input placeholder="Date" type="date" name="date" value={this.state.date} onChange={this.changeHandler} />
