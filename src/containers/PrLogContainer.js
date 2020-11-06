@@ -11,8 +11,7 @@ class PrLogContainer extends React.Component {
   //
     state = {
         events: [],
-        targetObj: [],
-        submit: 'false'
+        targetObj: []
     }
 
     updateEvents = ()=>  {
@@ -73,17 +72,32 @@ class PrLogContainer extends React.Component {
     
    
 
-    submitHandler = () => {
-        console.log("submitting")
-        this.setState({submit: !this.state.submit})
+
+
+
+    handleDelete(id){
+      fetch(`http://localhost:3003/events/${id}`, 
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then((response) => { 
+          console.log('Item was deleted!')
+        })
     }
 
+
+
+
     render() {
+      console.log(this.state.events)
         return (
         <>
             <div className='container'>
             <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} createCalendarEntry={this.createCalendarEntry} />
-            <PrLogContR events={this.state.events} event={this.state.targetObj} />
+            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} />
             </div>
         </>
         )

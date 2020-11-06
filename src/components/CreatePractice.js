@@ -21,14 +21,28 @@ class CreatePractice extends React.Component {
     newPracticeFormSubmitHandler = (e)=>  {
         e.preventDefault()
         this.props.createCalendarEntry(this.state)
+        this.setState({ 
+            events: [],
+            title: "",
+            date: "",
+            duration: "",
+            instrument: "",
+            subject: "",
+            goal: "",
+            reflection: ""
+            })
     }
 
     changeHandler = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
 
+    onHandleSubmit = (e) => {
+
+    }
+
     render() {
-    // console.log(this.state.events)
+    console.log(this.state.events)
     return (
         <>
         <form className="new-practice-log-form" onSubmit={this.newPracticeFormSubmitHandler}>

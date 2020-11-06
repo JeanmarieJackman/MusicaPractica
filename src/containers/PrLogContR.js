@@ -24,7 +24,7 @@ class PrLogContR extends React.Component {
     render() {
         return (
             <div className='master-detail-element detail'>
-                <PrLogView events={this.props.events} event={this.props.event} clickHandler={this.clickHandler} hideLogHandler={this.hideLogHandler} deleteLogHandler={this.deleteLogHandler}/>
+                <PrLogView events={this.props.events} event={this.props.event} handleDelete={this.props.handleDelete} clickHandler={this.clickHandler} hideLogHandler={this.hideLogHandler} deleteLogHandler={this.deleteLogHandler} />
             </div>
 
         )
