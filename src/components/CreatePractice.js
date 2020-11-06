@@ -42,7 +42,7 @@ class CreatePractice extends React.Component {
     }
 
     render() {
-    console.log(this.state.events)
+    // console.log(this.state.events)
     return (
         <>
         <form className="new-practice-log-form" onSubmit={this.newPracticeFormSubmitHandler}>

@@ -9,13 +9,18 @@ class PrLogContR extends React.Component {
         id: null,
     }
 
-    clickHandler = (id) => {
-        console.log("click", id)
-        this.setState({
-            clicked: !this.state.clicked,
-            id: id
-        })
-    }
+    // clickHandler = (id) => {
+    //     console.log("click", id)
+    //     this.setState({
+    //         clicked: !this.state.clicked,
+    //         id: id
+    //     })
+    // }
+
+    // renderPrLogView = () => {
+    //     return <PrLogView events={this.props.events} event={this.props.event} handleDelete={this.props.handleDelete} clickHandler={this.clickHandler} hideLogHandler={this.hideLogHandler}   />
+
+    // }
 
     hideLogHandler = () => {
         this.setState({ clicked: !this.state.clicked, id: null })
@@ -24,8 +29,11 @@ class PrLogContR extends React.Component {
     render() {
         return (
             <div className='master-detail-element detail'>
-                <PrLogView events={this.props.events} event={this.props.event} handleDelete={this.props.handleDelete} clickHandler={this.clickHandler} hideLogHandler={this.hideLogHandler} deleteLogHandler={this.deleteLogHandler} />
+                {this.state.clicked ? <PrLogView events={this.props.events} event={this.props.event} handleDelete={this.props.handleDelete} clickHandler={this.props.clickHandler} hideLogHandler={this.hideLogHandler}   /> : null}
+
+                
             </div>
+            
 
         )
 
