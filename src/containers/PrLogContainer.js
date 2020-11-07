@@ -60,7 +60,10 @@ class PrLogContainer extends React.Component {
 
     handleSelectEvent = (event) => {
         console.log("clicked", event)
-        this.setState({targetObj: event})
+        this.setState({
+          targetObj: event,
+          clicked: !this.state.clicked
+        })
     }
     
    //
@@ -132,8 +135,8 @@ class PrLogContainer extends React.Component {
         return (
         <>
             <div className='container'>
-            <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} createCalendarEntry={this.createCalendarEntry} clickHandler={this.clickHandler}/>
-            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler}/>
+            <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} createCalendarEntry={this.createCalendarEntry} clickHandler={this.clickHandler} clicked={this.state.clicked}/>
+            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} clicked={this.state.clicked}/>
             </div>
         </>
         )
