@@ -34,9 +34,9 @@ class PrLogContainer extends React.Component {
     //     return <PrLogView key={event.id} event={event} clickHandler={this.hideLogHandler} />
     // }
 
-    // hideLogHandler = () => {
-    //     this.setState({ clicked: !this.state.clicked, id: null })
-    // }
+    hideLogHandler = () => {
+        this.setState({ clicked: !this.state.clicked, id: null })
+    }
 
 
 
@@ -136,7 +136,7 @@ class PrLogContainer extends React.Component {
         <>
             <div className='container'>
             <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} createCalendarEntry={this.createCalendarEntry} clickHandler={this.clickHandler} clicked={this.state.clicked}/>
-            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} clicked={this.state.clicked}/>
+            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} clicked={this.state.clicked} hideLogHandler={this.hideLogHandler}/>
             </div>
         </>
         )
