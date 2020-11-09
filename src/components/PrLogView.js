@@ -1,13 +1,24 @@
 import React from 'react';
+import CreatePractice from './CreatePractice';
 
 class PrLogView extends React.Component {
 
+    state = {
+        clicked: false
+    }
+
+    editClickHandler = (id) => {
+        console.log("clicked", id);
+        this.setState({ clicked: true });
+    }
 
 
+    // onClick={this.props.editLogHandler}
 
 
     render() {
-        // console.log(this.props.event.id)
+        
+        console.log(this.state.clicked)
         return (
             <div className="event-page" >
                 <div style={{display: "flex",  flexDirection: "column"}}>
@@ -22,7 +33,7 @@ class PrLogView extends React.Component {
                 </div>
                 <div style={{display: "flex",  flexDirection: "row", justifyContent: "space-around"}}>
                 <button type="button" className="delete" onClick={() => this.props.handleDelete(this.props.event.id)}>Delete this Log  </button>               
-                <button type="button" className="edit" onClick={this.props.editLogHandler}>Edit this Log  </button>
+                <button type="button" className="edit" onClick={this.editClickHandler}>Edit this Log  </button>
                 <button type="button" className="hide" onClick={this.props.hideLogHandler}>Close this Log  </button>
                 </div>
 

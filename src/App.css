@@ -109,7 +109,7 @@ div.sidebar button {
 }
 
 .sidebar {
-  width:66%;
+  min-width: 66%;
   overflow: scroll;
 }
 

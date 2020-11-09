@@ -115,17 +115,16 @@ class PrLogContainer extends React.Component {
       .then((response) => {
         if (response.status === 204) {
           alert('Event deleted');
-          const { history } = this.props;
-          history.push('/events');
-          const { events } = this.state;
-          this.setState({ events: events.filter(event => event.id !== id) });
-          this.updateEvents();
+          this.setState({deleted: !this.state.deleted});
         }
       })
       .catch((error) => {
         console.log(error);
       });
     }
+
+    // editLogHandler
+    
 
 
 

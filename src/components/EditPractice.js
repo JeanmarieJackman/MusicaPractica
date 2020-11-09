@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CreatePractice extends React.Component {
+class EditPractice extends React.Component {
 
 
     //
@@ -53,7 +53,7 @@ class CreatePractice extends React.Component {
         <input placeholder="Instrument" type="text" name="instrument" value={this.state.instrument} onChange={this.changeHandler} />
         <input placeholder="Goals" type="text" name="goal" value={this.state.goal} onChange={this.changeHandler} />
         <textarea placeholder="Reflection" rows={10} type="text" name="reflection" value={this.state.reflection} onChange={this.changeHandler} />
-        <input type="submit" value="Submit" onSubmit={this.props.editLogHandler} />
+        <input type="submit" value="Submit" onSubmit={this.props.submitHandler} />
         </form>
         </>
     );
@@ -61,4 +61,4 @@ class CreatePractice extends React.Component {
 
 }
 
-export default CreatePractice;
+export default EditPractice;
