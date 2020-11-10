@@ -23,7 +23,7 @@ class EditPractice extends React.Component {
         this.props.createCalendarEntry(this.state)
         this.setState({ 
             events: [],
-            title: "",
+            title: this.props.title,
             date: "",
             duration: "",
             instrument: "",
@@ -46,8 +46,8 @@ class EditPractice extends React.Component {
     return (
         <>
         <form className="new-practice-log-form" onSubmit={this.newPracticeFormSubmitHandler}>
-        <h3>Log a Practice Session</h3>
-        <input placeholder="Piece, Etude, or Scales practiced" type="text" name="title" value={this.state.title} onChange={this.changeHandler} />
+        <h3>Edit this Practice Session</h3>
+        <input placeholder={this.state.title} type="text" name="title" value={this.state.title} onChange={this.changeHandler} />
         <input placeholder="Date" type="date" name="date" value={this.state.date} onChange={this.changeHandler} />
         <input placeholder="Minutes practiced" type="integer" name="duration" value={this.state.duration} onChange={this.changeHandler} />
         <input placeholder="Instrument" type="text" name="instrument" value={this.state.instrument} onChange={this.changeHandler} />

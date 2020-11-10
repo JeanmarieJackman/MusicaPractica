@@ -25,7 +25,8 @@ class PrLogContainer extends React.Component {
     clickHandler = (id) => {
         console.log("click", id)
         this.setState({
-            clicked: !this.state.clicked,
+            clicked: true,
+            editing: false
     //         id: id
         })
     }
@@ -125,14 +126,17 @@ class PrLogContainer extends React.Component {
 
     editingClickHandler = (id) => {
       console.log("editing")
-      // this.setState({ editing: true, id: this.state.id})
+      this.setState({
+        clicked: false,
+        editing: true,
+    })
   }    
 
 
 
 
     render() {
-      console.log(this.state.editing)
+      console.log("editng", this.state.editing)
         return (
         <>
             <div className='container'>

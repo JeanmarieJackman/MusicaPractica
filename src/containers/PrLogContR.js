@@ -7,7 +7,8 @@ class PrLogContR extends React.Component {
 
     state = {
         clicked: false,
-        id: null
+        id: null,
+        editing: false
     }
 
     // clickHandler = (id) => {
@@ -28,10 +29,11 @@ class PrLogContR extends React.Component {
     // }
 
     render() {
+        console.log("editing", this.state.editing)
         return (
             <div className='master-detail-element detail'>
-                {this.props.clicked ? <PrLogView events={this.props.events} event={this.props.event} handleDelete={this.props.handleDelete} clickHandler={this.props.clickHandler} hideLogHandler={this.props.hideLogHandler} editLogHandler={this.props.editLogHandler} editing={this.props.editing} editingClickHandler={this.props.editingClickHandler} /> : null}
-                {this.props.editing ? <EditPractice /> : null}
+                {this.props.clicked ? <PrLogView events={this.props.events} event={this.props.event} handleDelete={this.props.handleDelete} clickHandler={this.props.clickHandler} hideLogHandler={this.props.hideLogHandler}  editing={this.props.editing} editingClickHandler={this.props.editingClickHandler} /> : this.props.editing ? <EditPractice />: null}
+                {/* {this.props.editing ? <EditPractice /> : null} */}
                 
             </div>
             
