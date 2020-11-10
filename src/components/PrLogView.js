@@ -18,7 +18,7 @@ class PrLogView extends React.Component {
 
     render() {
         
-        console.log(this.state.clicked)
+        // console.log(this.state.clicked)
         return (
             <div className="event-page" >
                 <div style={{display: "flex",  flexDirection: "column"}}>
@@ -33,7 +33,7 @@ class PrLogView extends React.Component {
                 </div>
                 <div style={{display: "flex",  flexDirection: "row", justifyContent: "space-around"}}>
                 <button type="button" className="delete" onClick={() => this.props.handleDelete(this.props.event.id)}>Delete this Log  </button>               
-                <button type="button" className="edit" onClick={this.editClickHandler}>Edit this Log  </button>
+                <button type="button" className="edit" onClick={this.props.editingClickHandler(this.props.event.id)}>Edit this Log  </button>
                 <button type="button" className="hide" onClick={this.props.hideLogHandler}>Close this Log  </button>
                 </div>
 

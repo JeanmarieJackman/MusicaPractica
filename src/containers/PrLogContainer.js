@@ -6,14 +6,15 @@ class PrLogContainer extends React.Component {
 
   
   //
-  //  Global events arrray state.  A list of all scheduled events
+  //  Global events array state.  A list of all scheduled events
   //
   //
     state = {
         events: [],
         targetObj: [],
-        deleted: 'false',
-        clicked: false
+        deleted: false,
+        clicked: false,
+        editing: false,
     }
 
     // state = {
@@ -115,7 +116,6 @@ class PrLogContainer extends React.Component {
       .then((response) => {
         if (response.status === 204) {
           alert('Event deleted');
-          this.setState({deleted: !this.state.deleted});
         }
       })
       .catch((error) => {
@@ -123,19 +123,21 @@ class PrLogContainer extends React.Component {
       });
     }
 
-    // editLogHandler
-    
+    editingClickHandler = (id) => {
+      console.log("editing")
+      // this.setState({ editing: true, id: this.state.id})
+  }    
 
 
 
 
     render() {
-      console.log(this.state.clicked)
+      console.log(this.state.editing)
         return (
         <>
             <div className='container'>
             <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} createCalendarEntry={this.createCalendarEntry} clickHandler={this.clickHandler} clicked={this.state.clicked}/>
-            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} clicked={this.state.clicked} hideLogHandler={this.hideLogHandler}/>
+            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} clicked={this.state.clicked} hideLogHandler={this.hideLogHandler} editing={this.state.editing} editingClickHandler={this.editingClickHandler}/>
             </div>
         </>
         )
