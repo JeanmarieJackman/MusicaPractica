@@ -8,22 +8,24 @@ class EditPractice extends React.Component {
     //  This is submitted up to the PrLogContainer which adds it to the global list of events through the backend
     //  This must be state as the UI modifies it
     state={
-        title: "",
-        date: "",
+        id: this.props.event.id,
+        title: this.props.event.title,
+        date: this.props.event.title,
         allDay: 'false',
-        goal: "",
-        duration: "",
-        instrument: "",
-        reflection: "",
+        goal: this.props.event.goal,
+        duration: this.props.event.duration,
+        instrument: this.props.event.instrument,
+        reflection: this.props.event.reflection,
         user_id: 1
     }
        
-    newPracticeFormSubmitHandler = (e)=>  {
+    editPracticeFormSubmitHandler = (e)=>  {
         e.preventDefault()
-        this.props.createCalendarEntry(this.state)
+        this.props.editCalendarEntry(this.state, this.state.id)
         this.setState({ 
             events: [],
-            title: this.props.title,
+            id: "",
+            title: '',
             date: "",
             duration: "",
             instrument: "",
@@ -37,17 +39,15 @@ class EditPractice extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    onHandleSubmit = (e) => {
 
-    }
 
     render() {
-    // console.log(this.state.events)
+    console.log("state", this.state)
     return (
         <>
-        <form className="new-practice-log-form" onSubmit={this.newPracticeFormSubmitHandler}>
+        <form className="new-practice-log-form" onSubmit={this.editPracticeFormSubmitHandler}>
         <h3>Edit this Practice Session</h3>
-        <input placeholder={this.state.title} type="text" name="title" value={this.state.title} onChange={this.changeHandler} />
+        <input type="text" name="title" value={this.state.title} onChange={this.changeHandler} />
         <input placeholder="Date" type="date" name="date" value={this.state.date} onChange={this.changeHandler} />
         <input placeholder="Minutes practiced" type="integer" name="duration" value={this.state.duration} onChange={this.changeHandler} />
         <input placeholder="Instrument" type="text" name="instrument" value={this.state.instrument} onChange={this.changeHandler} />

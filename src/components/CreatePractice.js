@@ -37,9 +37,7 @@ class CreatePractice extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    onHandleSubmit = (e) => {
 
-    }
 
     render() {
     // console.log(this.state.events)

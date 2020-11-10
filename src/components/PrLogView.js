@@ -1,5 +1,4 @@
 import React from 'react';
-import CreatePractice from './CreatePractice';
 
 class PrLogView extends React.Component {
 

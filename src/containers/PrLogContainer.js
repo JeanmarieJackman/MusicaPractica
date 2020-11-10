@@ -132,7 +132,39 @@ class PrLogContainer extends React.Component {
     })
   }    
 
-
+  editCalendarEntry = (calendarEntry, id)=>{
+    //
+    //  Date defaults to midnight in the local time zone, so here were explicity set it to Noon UTC so that it lands on the appropriate date in the callendar.
+    // 
+        let date = calendarEntry.date + "T12:00:00Z";
+    
+        fetch(`http://localhost:3003/events/${id}`, {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            title: calendarEntry.title,
+            start: date,
+            end: date,
+            allDay: calendarEntry.allDay,
+            goal: calendarEntry.goal,
+            duration: calendarEntry.duration,
+            instrument: calendarEntry.instrument,
+            reflection: calendarEntry.reflection,
+            user_id: calendarEntry.user_id
+          })
+        })
+        // new event is returned from the server
+        // .then(resp => resp.json())
+        .then(resp => {return resp})
+        .then(resp => {
+                   // any change will trigger a re reender which will castcade down to the calendar through react magic
+                  this.setState({
+                    events:[...this.state.events, resp],
+                    editing: false,
+                })
+              })
+              .catch(console.log)
+      }
 
 
     render() {
@@ -141,7 +173,7 @@ class PrLogContainer extends React.Component {
         <>
             <div className='container'>
             <PrLogContL events={this.state.events} handleSelectEvent={this.handleSelectEvent} createCalendarEntry={this.createCalendarEntry} clickHandler={this.clickHandler} clicked={this.state.clicked}/>
-            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} clicked={this.state.clicked} hideLogHandler={this.hideLogHandler} editing={this.state.editing} editingClickHandler={this.editingClickHandler}/>
+            <PrLogContR events={this.state.events} event={this.state.targetObj} handleDelete={this.handleDelete} clickHandler={this.clickHandler} editCalendarEntry={this.editCalendarEntry} clicked={this.state.clicked} hideLogHandler={this.hideLogHandler} editing={this.state.editing} editingClickHandler={this.editingClickHandler}/>
             </div>
         </>
         )
