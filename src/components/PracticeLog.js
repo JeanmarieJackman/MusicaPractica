@@ -8,6 +8,7 @@ render() {
     return (
 
         <div>
+          <h2>practicelog</h2>
           <PrLogContainer />
         </div> 
     )
@@ -17,4 +18,4 @@ render() {
 
 }
 
-export default PracticeLog
+export default PracticeLog;

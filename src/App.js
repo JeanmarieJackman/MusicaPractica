@@ -9,15 +9,27 @@ import PracticeLog from './components/PracticeLog'
 class App extends React.Component {
   render() {
     return (
+      <div className="App">
+        <header className="App-header">
+          <div>
+          <Navigation className="app-name"/>
+          </div>
+          {/* <div >          
+          <h1 className="app-name">Musica<b>Practica</b></h1>
+          </div> */}
+        </header>
       <main>
-                  <Navigation />
+        
+
 
           <Switch>
           <Route path='/' component={Home} />
           <Route path='/PracticeLog' component={PracticeLog} />
+          <Route component={Error} />
 
           </Switch>
       </main>
+      </div>
   )
   }
 }
