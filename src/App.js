@@ -1,5 +1,6 @@
 import React from "react";
 import './App.css';
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Navigation from './components/Navigation';
@@ -18,7 +19,7 @@ class App extends React.Component {
           <h1 className="app-name">Musica<b>Practica</b></h1>
           </div> */}
         </header>
-      <main className="App-main">
+      <main className="App-main" >
         
 
 

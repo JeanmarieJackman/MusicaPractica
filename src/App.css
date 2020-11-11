@@ -105,6 +105,83 @@ div.sidebar button {
   text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(255, 174, 0);
 }
 
+.grid-container {
+  background-color: #0d232ee7;
+  /* max-height: 95vh; */
+  display: flex;
+  display: grid;
+  flex-direction: row;
+  width: 100%;
+  grid-template-areas:
+  'timer metronome calendar calendar musicstand musicstand'
+  'keyboard keyboard  calendar  calendar  musicstand musicstand'
+  'keyboard keyboard bottom-space bottom-space musicstand musicstand';
+  padding: 10px;
+}
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 30px;
+}
+
+.item1 { 
+  grid-area: calendar;
+  max-height: 10vh;
+}
+.item2 { grid-area: timer;
+  max-height: 20vh;
+}
+.item3 { grid-area: metronome;
+  max-height: 20vh;
+}
+.item4 { grid-area: musicstand;
+  max-height: 40vh;
+}
+.item5 { grid-area: keyboard;
+  height: 40vh;
+}
+.item6 { grid-area: top-space;
+  /* max-height: 10vh; */
+}
+.item7 { grid-area: mid-space;
+  /* max-height: 10vh; */
+}
+.item8 { grid-area: bottom-space;
+  /* max-height: 10vh; */
+}
+
+img {
+  /* border-radius: 50%; */
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          /* transition:         transform .8s ease-in-out; */
+}
+img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+
+/* .grid-container {
+  display: grid;
+  grid-template-areas:
+    'calendar calendar calendar calendar musicstand musicstand'
+    'timer timer metronome metronome musicstand musicstand'
+    'keyboard keyboard keyboard keyboard musicstand musicstand';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+} */
+
+.grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 .container {
   flex: 1;
   width: 100%;
