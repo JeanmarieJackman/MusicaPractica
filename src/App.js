@@ -12,13 +12,13 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div>
-          <Navigation className="app-name"/>
+          <Navigation className="app-name" />
           </div>
           {/* <div >          
           <h1 className="app-name">Musica<b>Practica</b></h1>
           </div> */}
         </header>
-      <main>
+      <main className="App-main">
         
 
 
@@ -28,7 +28,11 @@ class App extends React.Component {
           <Route component={Error} />
 
           </Switch>
+          
       </main>
+      <footer className="App-footer">
+          <p className="app-name">jeanmarie.jackman@gmail.com</p>
+          </footer>
       </div>
   )
   }

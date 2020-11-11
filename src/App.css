@@ -12,6 +12,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.App-main {
+  background-color: #0d232ee7;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-footer {
   background-color: #016397e7;
   height: 5vh;
