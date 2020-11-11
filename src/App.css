@@ -17,11 +17,11 @@
   background-color: #0d232ee7;
   height: 85vh;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px + 2vmin);*/
+  /* color: white;  */
 }
 
 .App-footer {
@@ -105,6 +105,31 @@ div.sidebar button {
   text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(255, 174, 0);
 }
 
+.container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffffe7;
+}
+.master-detail-element {
+  float:left;
+  margin: 10px;
+  padding: 20px;
+  /* border: 2px solid grey; */
+}
+
+.sidebar {
+  min-width: 66%;
+  overflow: scroll;
+}
+
+.detail {
+  width:33%;
+}
+
+
 .grid-container {
   background-color: #0d232ee7;
   /* max-height: 95vh; */
@@ -170,29 +195,6 @@ img:hover {
   font-size: 30px;
 }
 
-.container {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.master-detail-element {
-  float:left;
-  margin: 10px;
-  padding: 20px;
-  border: 2px solid grey;
-}
-
-.sidebar {
-  min-width: 66%;
-  overflow: scroll;
-}
-
-.detail {
-  width:33%;
-}
 
 form.new-practice-log-form {
   padding: 1em;

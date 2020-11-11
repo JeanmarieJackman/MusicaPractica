@@ -4,7 +4,7 @@ import './App.css';
 import { Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Navigation from './components/Navigation';
-import PracticeLog from './components/PracticeLog';
+import PrLogContainer from './containers/PrLogContainer';
 import history from './history';
 
 
@@ -18,9 +18,6 @@ class App extends React.Component {
           <div>
           <Navigation className="app-name" />
           </div>
-          {/* <div >          
-          <h1 className="app-name">Musica<b>Practica</b></h1>
-          </div> */}
         </header>
       <main className="App-main" >
         
@@ -28,8 +25,8 @@ class App extends React.Component {
       <Router history={history}>
 
           <Switch>
-          <Route path='/' component={Home}  />
-          <Route path='/PracticeLog' component={PracticeLog} />
+          <Route path='/' exact component={Home}  />
+          <Route path='/PrLogContainer' exact component={PrLogContainer} />
           <Route component={Error} />
 
           </Switch>
@@ -38,7 +35,7 @@ class App extends React.Component {
       </main>
       <footer className="App-footer">
           <p className="app-name">jeanmarie.jackman@gmail.com</p>
-          </footer>
+        </footer>
       </div>
   )
   }

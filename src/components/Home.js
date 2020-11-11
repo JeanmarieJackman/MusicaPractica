@@ -4,7 +4,6 @@ import Keyboard from '../images/keyboard_v1-06.svg';
 import Metronome from '../images/metronome_v1-02.svg';
 import MusicStand from '../images/music_stand_v1-04.svg';
 import Timer from '../images/timer_v1-03.svg';
-import PrLogContainer from '../containers/PrLogContainer';
 import history from '../history.js';
 
 
