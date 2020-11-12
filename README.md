@@ -1,3 +1,10 @@
+
+## ARTWORK CREDIT:
+`SVG art: Calendar, Keyboard, Metronome, MusicStand, and Timer, were created by Jessica Leibowitz.` 
+You can find her here: https://www.jessicaleibowitz.com/
+
+####################################################################################################
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

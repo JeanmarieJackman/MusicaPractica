@@ -34,7 +34,7 @@ class App extends React.Component {
 
       </main>
       <footer className="App-footer">
-          <p className="app-name">jeanmarie.jackman@gmail.com</p>
+          <h4 className="app-name">contact:   <a href={'jeanmarie.jackman@gmail.com'}>  jeanmarie.jackman@gmail.com</a></h4>
         </footer>
       </div>
   )
@@ -43,18 +43,3 @@ class App extends React.Component {
 
 export default App;
 
-{/* <div className="App">
-        <header className="App-header">
-          <div >
-          <h1 className="app-name">Musica<b>Practica</b></h1>
-          </div>
-        </header>
-        <main>
-          <PrLogContainer />
-          <footer className="App-footer">
-          <p className="app-name">jeanmarie.jackman@gmail.com</p>
-          </footer>
-        </main>
-
-      </div>
-    ); */}
