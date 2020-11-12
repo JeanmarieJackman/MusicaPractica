@@ -19,7 +19,7 @@ class Home extends React.Component {
                 <div class="grid-container">
                     <div class="item1"><img src={PrCalendar} alt="Calendar" width="500" height="300" onClick={() => history.push('/PrLogContainer')} /></div>
                     <div class="item2"><img src={Timer} alt="Timer" width="200" height="200"/></div>
-                    <div class="item3"><img src={Metronome} alt="Metronome" width="150" height="450"/></div>  
+                    <div class="item3"><img src={Metronome} alt="Metronome" width="150" height="450" onClick={() => history.push('/Metronome')} /></div>  
                     <div class="item4"><img src={MusicStand} alt="Music-Stand" width="500" height="700" style={{transform: 'scaleX(-1)'}} /></div>
                     <div class="item5"><img src={Keyboard} alt="Keyboard" width="700" height="600" style={{transform: 'scaleX(1)'}} /></div>
                     <div class="item6"></div>

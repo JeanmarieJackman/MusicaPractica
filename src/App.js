@@ -5,6 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Navigation from './components/Navigation';
 import PrLogContainer from './containers/PrLogContainer';
+import Metronome from './components/Metronome';
 import history from './history';
 
 
@@ -27,6 +28,8 @@ class App extends React.Component {
           <Switch>
           <Route path='/' exact component={Home}  />
           <Route path='/PrLogContainer' exact component={PrLogContainer} />
+          <Route path='/Metronome' exact component={Metronome} />
+
           <Route component={Error} />
 
           </Switch>

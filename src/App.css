@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: space-evenly;
   font-size: calc(5px + 1vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* Global Styles */
@@ -102,7 +102,7 @@ div.sidebar button {
 }
 
 .app-name {
-  text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(255, 174, 0);
+  text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(91, 230, 240);
 }
 
 .container {
