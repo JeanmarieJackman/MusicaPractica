@@ -12,6 +12,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.App-main {
+  background-color: #0d232ee7;
+  height: 85vh;
+  display: flex;
+}
+
 .App-footer {
   background-color: #016397e7;
   height: 5vh;
@@ -20,7 +27,7 @@
   align-items: center;
   justify-content: space-evenly;
   font-size: calc(5px + 1vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* Global Styles */
@@ -84,13 +91,27 @@ div.sidebar button {
 /* Layout Styles */
 .app {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: calc(100vh - 10px);
   margin: 10px 10px 0 10px;
 }
 
 .app-name {
-  text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(255, 174, 0);
+  text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(91, 230, 240);
+}
+
+.metronome {
+  /* background-color: #986e58; */
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  margin-left: 400px;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: calc(10px + 2vmin);
+  color: white; 
 }
 
 .container {
@@ -99,23 +120,123 @@ div.sidebar button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #ffffffe7;
 }
-
 .master-detail-element {
-  float:left;
+  float:center;
   margin: 10px;
   padding: 20px;
-  border: 2px solid grey;
 }
 
 .sidebar {
-  width:66%;
+  min-width: 66%;
   overflow: scroll;
 }
 
 .detail {
   width:33%;
 }
+
+
+
+.grid-container {
+  background-color: #0d232ee7;
+  /* max-height: 95vh; */
+  display: flex;
+  display: grid;
+  flex-direction: row;
+  width: 100%;
+  grid-template-areas:
+  'timer metronome calendar calendar musicstand musicstand'
+  'keyboard keyboard  calendar  calendar  musicstand musicstand'
+  'keyboard keyboard bottom-space bottom-space musicstand musicstand';
+  padding: 10px;
+  color: rgba(176, 104, 104, 0.817);
+}
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 30px;
+}
+
+.item1 { 
+  grid-area: calendar;
+  max-height: 10vh;
+}
+.item2 { grid-area: timer;
+  max-height: 20vh;
+}
+.item3 { grid-area: metronome;
+  max-height: 20vh;
+}
+.item4 { grid-area: musicstand;
+  max-height: 40vh;
+}
+.item5 { grid-area: keyboard;
+  height: 50vh;
+}
+.item6 { grid-area: top-space;
+  /* max-height: 10vh; */
+}
+.item7 { grid-area: mid-space;
+  /* max-height: 10vh; */
+}
+.item8 { grid-area: bottom-space;
+  /* max-height: 10vh; */
+}
+
+img {
+  /* border-radius: 50%; */
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.item4:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.item5:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 
 form.new-practice-log-form {
   padding: 1em;
