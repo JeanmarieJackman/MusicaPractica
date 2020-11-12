@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Metronome.css'
 
 class Metronome extends React.Component {
     constructor(props) {
@@ -63,7 +62,7 @@ class Metronome extends React.Component {
 
     render() {
         return (
-          <div>
+          <div className="metronome" >
               <h1>Metronome</h1>
               <Slider bpm={this.state.bpm} handleChange={this.handleBPM}/>
               <Button handleClick={this.startStop} currentState={this.state.playing}/>
