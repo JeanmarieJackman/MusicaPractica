@@ -16,8 +16,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div>
-          <Navigation className="app-name" />
+          <div >
+          <Navigation  />
           </div>
         </header>
       <main className="App-main" >
@@ -26,9 +26,9 @@ class App extends React.Component {
       <Router history={history}>
 
           <Switch>
-          <Route path='/' exact component={Home}  />
-          <Route path='/PrLogContainer' exact component={PrLogContainer} />
-          <Route path='/Metronome' exact component={Metronome} />
+          <Route exact path='/'  component={Home}  />
+          <Route path='/PrLogContainer'  component={PrLogContainer} />
+          <Route path='/Metronome'  component={Metronome} />
 
           <Route component={Error} />
 
@@ -37,7 +37,7 @@ class App extends React.Component {
 
       </main>
       <footer className="App-footer">
-          <h4 className="app-name">contact:   <a href={'jeanmarie.jackman@gmail.com'}>  jeanmarie.jackman@gmail.com</a></h4>
+          <h4 className="app-name">contact:     jeanmarie.jackman@gmail.com</h4>
         </footer>
       </div>
   )

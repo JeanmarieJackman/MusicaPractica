@@ -31,6 +31,7 @@ render() {
                 localizer={localizer}
                 views={['month']}
                 onSelectEvent={this.props.handleSelectEvent}
+                eventPropGetter={() => { const backgroundColor =  "#1cc6d3"; return { style: { backgroundColor } }; }}
             />
             </div>
         </div>

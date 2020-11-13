@@ -3,7 +3,9 @@
 }
 
 .App-header {
-  background-color: #016397e7;
+  /* background-color: #a9c632; */
+
+  background-color: #1cc6d3;
   height: 10vh;
   display: flex;
   flex-direction: row;
@@ -20,7 +22,7 @@
 }
 
 .App-footer {
-  background-color: #016397e7;
+  background-color: #1cc6d3;
   height: 5vh;
   display: flex;
   flex-direction: row;
@@ -58,7 +60,7 @@ input {
   height: 40px;
   width: 100%;
   border: 2px solid grey;
-  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 6px 6px 2px 1px rgba(0, 136, 255, 0.2);
   margin: 2px;
 }
 
@@ -68,7 +70,7 @@ textarea {
   width: 100%;
   border: 2px solid grey;
   margin: 2px;
-  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 6px 6px 2px 1px rgba(0, 136, 255, 0.2);
 }
 
 input::placeholder {
@@ -97,21 +99,26 @@ div.sidebar button {
 }
 
 .app-name {
-  text-shadow: 1px 1px 2px rgb(173, 216, 112), 0 0 1em rgb(255, 174, 0), 0 0 0.2em rgb(91, 230, 240);
+  /* color: #0d232ee7; */
+  text-shadow: 1px 1px 2px rgb(165, 232, 70), 0 0 1em rgb(0, 115, 255), 0 0 0.2em rgb(240, 136, 91);
 }
 
 .metronome {
-  /* background-color: #986e58; */
-  height: 85vh;
+  background-color: #ea5353;
+  height: 66vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; 
-  margin-left: 400px;
-  padding-left: 200px;
-  padding-right: 200px;
+  margin-left: 34%;
+  margin-right: 34%;
+  margin-top: 5%;
+  padding-left: 100px;
+  padding-right: 100px;
   font-size: calc(10px + 2vmin);
   color: white; 
+  text-shadow: 1px 1px 2px rgb(165, 232, 70), 0 0 1em rgb(0, 115, 255), 0 0 0.2em rgb(240, 136, 91);
+
 }
 
 .container {
@@ -270,7 +277,7 @@ button, input[type="submit"] {
   margin-right: 10px;
   padding: 5px 35px;
   border: 0px;
-  background-color: cadetblue;
+  background-color: #1cc6d3;
   background-repeat: no-repeat;
   color: white;
   font-size: 14px;
@@ -279,7 +286,7 @@ button, input[type="submit"] {
 }
 
 button:hover, .nav-bar:hover, input[type="submit"]:hover {
-  background-color: teal;
+  background-color: #0c6a9ae7;
   background-repeat: no-repeat;
 }
 
@@ -293,6 +300,16 @@ button:focus, input[type="submit"]:focus {
   font: 14px;
   text-align: center;
 }
+
+.rbc-calendar {
+  font-family: sans-serif;
+  color: #0d232ee7;
+}
+
+
+
+
+
 
 
 
